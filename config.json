@@ -1,0 +1,44 @@
+{
+    "name": "test-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "tasks.max": 1,
+        "database.hostname": "localhost",
+        "database.port": "3306",
+        "database.user": "root",
+        "database.password": "root",
+        "database.server.id": "1",
+        "database.allowPublicKeyRetrieval": "true",
+        "database.server.name":"server1", 
+        "topic.prefix" : "connect-",  
+        "database.whitelist": "employees",
+        "database.history.kafka.bootstrap.servers": "localhost:9092",
+        "database.history.kafka.topic": "test",
+        "include.schema.changes": "true"
+    }
+}
+
+
+Output:
+{
+    "name": "test-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "tasks.max": "1",
+        "database.hostname": "localhost",
+        "database.port": "3306",
+        "database.user": "root",
+        "database.password": "root",
+        "database.server.id": "1",
+        "database.allowPublicKeyRetrieval": "true",
+        "database.server.name": "server1",
+        "topic.prefix": "connect-",
+        "database.whitelist": "employees",
+        "database.history.kafka.bootstrap.servers": "localhost:9092",
+        "database.history.kafka.topic": "test",
+        "include.schema.changes": "true",
+        "name": "test-connector"
+    },
+    "tasks": [],
+    "type": "source"
+}
